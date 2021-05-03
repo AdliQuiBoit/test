@@ -1,0 +1,104 @@
+@font-face{/*déclare la polices*/
+    font-family: 'open-sans';
+    src: url(../fonts/OpenSans-Bold.ttf),
+    url(../fonts/OpenSans-BoldItalic.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');/*police d'écriture importé depuis google font, fonctionne avec le link dans notre fichier html*/
+
+#name-id{/*identifiant unique*/
+    color: brown;
+}
+.underline{/*class peut toucher plusieurs éléments*/
+    text-decoration: underline;
+}
+/*
+!important : rend la propriété css importante et lu, prend le dessus en cas de conflit
+le selecteur universel css * (astérisque ou étoile) permet de sélectionner n'importe quel élément, quel que soit son type.( attention cependant déconseillé car alourdit
+
+Poids des selecteurs :
+!important>nb id> nb class> nb balise / sélecteur avec plus de poids l'emporte
+
+*/
+h2{
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;/*police d'écriture par défaut déjà existante*/
+}
+ul li.color-green{
+    color: #3d7208;
+    font-family: open-sans,Arial;/*police intégré avec @fontface déclaré plus haut*/
+}
+
+#test{
+    color: rgba(0, 0, 139, 0.472);/*remporte car l'id est plus lourd que la class*/
+    background-color: greenyellow;
+    font-family: 'Syne Mono', monospace;/*police importer depuis google font*/
+}
+.test02{
+    color: gray;
+}
+
+p, h2{/*Selection multiple*/
+    text-decoration: overline;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+
+}
+/*Propriétés CSS de texte
+color: mots en anglais, hexadecimal,rgb,rgba
+font-size: taille du texte
+font-style: italic ou normal
+font-weight: épaisseur du texte (ex:bold)
+text-decoration: underline / none /overline...
+text-align: (center / left / right / justify )
+background-color: mots en anglais, hexadecimal,rgb,rgba
+text-shadow: 4px 4px 2px rgba(150,150,150,1);
+générateur d'ombre sur le texte : https://css3gen.com/text-shadow/
+
+*/
+
+/*Parenthèse sur les unités de mesures en css*/
+
+/*
+px:taille fixe
+
+em:taille proportionnelle / 1em = taille par défault du parent ou par la suite du navigateur si la taille du parent n'est pas définit (ex: 3em = 3xplus gros)
+1em = 16px
+
+rem: taille proportionnelle / 1rem = taille du navigateur sans changer par rapport à a taille définit de sont parent
+
+*/
+
+.test-div{
+    width: 200px;/*largeur*/
+    height: 200px;/*hauteur*/
+    background-color: rgba(128, 128, 128, 0.506);
+}
+/*
+Marge extérieur
+    margin : 5px;
+    margin : 5px 6px;(vertical, horizontal)
+    margin : 5px 6px 7px; (haut, horizontal, bas)
+    margin : 5px 6px 7px 8px; (sens des aiguilles d'une montre)
+    margin-top/bottom/left/right: 5px
+
+Marge intérieur
+
+    padding: 5px;
+    padding: 5px 6px; (vertical/horizontal)
+    padding: 5px 6px 7px; (haut, horizontal, bas)
+    padding-top/bottom/left/right: 5px; (technique horloge)
+
+Bordure (entre les marges)
+
+    border: 5px solid black;
+    types de bordures (none, solid, dotted, dashed, double, groove, ridge, inset, outset)
+    border-top/bottom/left/right
+    border-radius: 10px; (arrondissement des 4 angles en même temps)
+    border-radius: 10px 9px 8px 7px; (arrondissement des 4 angles individuellement)
+
+Tailles min/max
+
+    min-width / max-width
+    min-height / max-height
+*/
